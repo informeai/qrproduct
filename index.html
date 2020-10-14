@@ -3,14 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    
     <title>QRProduct</title>
 </head>
 <body>
     <div id="content">
+        <section id="login" class="">
+            <div id="card-qr">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>QRProduct</div>
+            </div>
 
+            <form action="#">
+                <input type="text" id="name" placeholder="Nome" required>
+                <input type="password" id="pass" placeholder="Senha" required>
+                <input type="button" value="Entrar" id="submit">
+            </form>
+            <div id="new-user">
+                <span><i class="material-icons">add</i>Novo</span>
+            </div>
+            
+        </section>
         
+
+        <section id="snack" class="disable">
+            <div>Usuário ou Senha Invalidos</div>
+        </section>
+
+        <section id="load" class="disable">
+           
+                <svg width='50' height='50' viewBox='0 0 50 50'>
+                    <circle cx='25' cy='25' r='13'></circle>
+                </svg>
+            
+            
+
+        </section>
     </div>
 
-    
+    <script src="./js/login.js"></script>
 </body>
 </html>

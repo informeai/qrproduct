@@ -1,0 +1,226 @@
+*{
+    font-family: 'Poppins';
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #0070ff;
+    --second-color: #a4c7f4;
+    --background-color: #fafbff;
+    --primary-text-color: #333333;
+    --second-text-color: #666666;
+}
+
+body{
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+/* Login */
+
+#login.disable{
+    display: none;
+}
+
+#login{
+    padding-top: 20px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+
+#login #card-qr{
+    position: relative;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--primary-text-color) ;
+    border-radius: 10px;
+    z-index: 5;
+
+}
+#login #card-qr :nth-child(1){
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: var(--primary-text-color);
+}
+#login #card-qr :nth-child(2){
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: var(--primary-text-color);
+}
+#login #card-qr :nth-child(3){
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: var(--primary-text-color);
+}
+#login #card-qr :nth-child(4){
+    position: absolute;
+    top: 20px;
+    left: -50px;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    color: var(--primary-color);
+    font-size: 2.1rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    z-index: 7;
+}
+#login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#login form input{
+    margin-top: 20px;
+    padding-left: 5px;
+    width: 100px;
+    text-decoration: var(--primary-color);
+    height: 30px;
+    background-color: transparent;
+    outline-color: var(--primary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--second-text-color);
+    border-radius: 5px;
+}
+#login form input::-webkit-input-placeholder{
+    color: var(--primary-color);
+}
+#login form input:nth-child(3){
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--background-color);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+}
+#login #new-user{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    
+}
+#login #new-user span{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* Home */
+#home.disable{
+    display: none;
+}
+
+/* Load */
+#load.disable{
+    display: none;
+}
+
+#load{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+}
+
+#load svg{
+    max-width: 100px;
+    animation: 2s animateSvg infinite;
+}
+
+#load svg circle{
+    stroke-width: 4px;
+    stroke: var(--primary-color);
+    fill: none;
+    stroke-dasharray: 180;
+    stroke-dashoffset: 180;
+    stroke-linecap: round;
+    transform-origin: 50% 50%;
+    animation: 2s animateCircle infinite;
+}
+
+@keyframes animateCircle{
+    0%,25%{
+        stroke-dashoffset: 175;
+        transform: rotate(0);
+    }
+    50%,75%{
+        stroke-dashoffset: 120;
+        transform: rotate(45deg);
+    }
+    100%{
+        stroke-dashoffset: 175;
+        transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes animateSvg{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* Snack */
+#snack.disable{
+    opacity: 0;
+    display: block;
+    height: 0;
+    
+    
+}
+
+#snack{
+    display: block;
+    position: absolute;
+    height: 30px;
+    padding: 5px;
+    bottom: 0;
+    left: 45%;
+    background-color: var(--primary-text-color);
+    color: var(--background-color);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 1;
+    transition: all 0.5s;
+
+}
